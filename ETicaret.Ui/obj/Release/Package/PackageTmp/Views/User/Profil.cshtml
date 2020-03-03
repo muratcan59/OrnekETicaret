@@ -1,0 +1,14 @@
+﻿@using  ETicaret.Model
+
+@{
+    ViewBag.Title = "Profil";
+}
+
+<h2>Profil</h2>
+
+kullanıcı girişi yapıldı, profil sayfası açıldı.
+
+@{ var user =Session["LoginUser"] as Kullanici;
+    <h3>Hoşgeldin, @user.Ad @user.Soyad</h3>
+        }
+}

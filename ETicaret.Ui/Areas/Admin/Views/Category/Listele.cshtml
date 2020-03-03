@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ETicaret.Model.Kategori>
+
+@{
+    ViewBag.Title = "Listele";
+}
+
+<h2>Listele</h2>
+
+<p>
+    @Html.ActionLink("Yeni Ekle", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KayitTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDelete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UstKategorisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KayitTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDelete)
+            </td>
+            <td>
+                @(item.UstKategorisi == null ? Html.Raw("-") : @Html.DisplayFor(modelItem => item.UstKategorisi.Ad))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Duzenle", new { id = item.Id }) |
+                @Html.ActionLink("Detay", "Detay", new { id = item.Id }) |
+                <button type="button" id="@item.Id" class="btn btn-primary" onclick="SilinecekDatayiAta(@item.Id)" data-toggle="modal" data-target="#exampleModal">
+                    Sil
+                </button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Emin Misiniz?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               Kategoriyi silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" onclick="KategoriSil()">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var silinecekData = 0;
+    function KategoriSil() {
+        window.location = "/Admin/Category/Sil/" + silinecekData;
+        }
+    function SilinecekDatayiAta(id) {
+        silinecekData = id;
+    }
+</script>

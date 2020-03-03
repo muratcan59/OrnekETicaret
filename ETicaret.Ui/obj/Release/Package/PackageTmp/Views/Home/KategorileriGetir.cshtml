@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ETicaret.Model.Kategori>
+
+
+@foreach (var item in Model.Where(x => x.UstKategoriId == null))
+{
+    <li class="nav-item submenu dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+           aria-expanded="false">@item.Ad</a>
+        <ul class="dropdown-menu">
+            @foreach (var altKategori in Model.Where(x => x.UstKategoriId != null))
+            {
+                if (altKategori.UstKategoriId == item.Id)
+                {
+                    <li class="nav-item"><a class="nav-link" href="#">@altKategori.Ad</a></li>
+
+                }
+            }
+        </ul>
+    </li>
+}

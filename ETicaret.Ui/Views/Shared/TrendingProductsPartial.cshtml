@@ -1,0 +1,36 @@
+﻿@using  ETicaret.Model
+@model List<Urun>
+<section class="section-margin calc-60px">
+    <div class="container">
+        <div class="section-intro pb-60px">
+            <p>Popular Item in the market</p>
+            <h2>Trending <span class="section-intro__style">Product</span></h2>
+        </div>
+        <div class="row">
+            @{
+                foreach (var item in Model)
+                {
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="card text-center card-product">
+                            <div class="card-product__img">
+                                <img class="card-img" height="150px" src="@(item.Fotograflari.Count==0 ? "" : item.Fotograflari.FirstOrDefault().Url)" alt="">
+                                <ul class="card-product__imgOverlay">
+                                    <li><button><i class="ti-search"></i></button></li>
+                                    <li><button><i class="ti-shopping-cart"></i></button></li>
+                                    <li><button><i class="ti-heart"></i></button></li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <p>@item.Adi</p>
+                                <h4 class="card-product__title"><a href="@ETicaret.Helper.UrlHelper.UrlOlustur(item.Adi+" "+item.Marka+ " "+item.Modeli)-@item.Id-urunu">@item.Marka @item.Modeli</a></h4>
+                                <p class="card-product__price">@item.Fiyati</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+    </div>
+</section>

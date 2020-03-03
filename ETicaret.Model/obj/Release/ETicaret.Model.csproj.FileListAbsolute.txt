@@ -1,0 +1,9 @@
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\bin\Release\ETicaret.Model.dll
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\bin\Release\ETicaret.Model.pdb
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\bin\Release\Newtonsoft.Json.dll
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\bin\Release\Newtonsoft.Json.xml
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\obj\Release\ETicaret.Model.csprojAssemblyReference.cache
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\obj\Release\ETicaret.Model.csproj.CoreCompileInputs.cache
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\obj\Release\ETicaret.Model.csproj.CopyComplete
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\obj\Release\ETicaret.Model.dll
+Z:\Fatma Betül YILMAZ\Asp.NET 2 (23.09) Öğle Branşı\Proje\Hafta10_1\ETicaret\ETicaret.Model\obj\Release\ETicaret.Model.pdb
